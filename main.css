@@ -1,0 +1,26 @@
+body{
+    background-color: lightpink;
+    color: darkmagenta; 
+    font-family: Arial; 
+    margin: 0px;
+}
+
+header{
+    background-color: hotpink;
+    color: rebeccapurple;
+    padding: 10px;
+    font-size: 16pt
+}
+
+footer{
+    background-color: hotpink;
+    color: rebeccapurple;
+    padding: 10px;
+    font-size: 16pt;
+    text-align: center
+}
+
+a{
+    text-decoration: none; 
+    color: chartreuse;   
+}

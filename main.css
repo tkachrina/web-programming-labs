@@ -21,6 +21,22 @@ footer{
 }
 
 a{
-    text-decoration: none; 
-    color: chartreuse;   
+    text-decoration:none;
+    color: chartreuse;
+    font-weight: bold;   
+}
+a:visited {
+    color: rgb(175, 11, 93);
+}
+
+a:hover {
+    color: rgba(255, 0, 179, 0.705);
+    text-decoration: underline;
+    background-color: white;
+    font-weight: bold;
+}
+
+a:active{
+    color: rgb(182, 83, 83);
+    background-color: rgb(66, 252, 66);
 }

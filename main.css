@@ -31,10 +31,12 @@ footer:hover {
 a{
     text-decoration:none;
     color: chartreuse;
-    font-weight: bold;   
+    text-shadow: 1px 1px 10px rgb(255, 0, 242);
+    transition: 600ms 1s   
 }
 a:visited {
     color: rgb(175, 11, 93);
+    background-color: green
 }
 
 a:hover {
@@ -42,6 +44,7 @@ a:hover {
     text-decoration: underline;
     background-color: white;
     font-weight: bold;
+    transition: 900ms 0.3s;
 }
 
 a:active{

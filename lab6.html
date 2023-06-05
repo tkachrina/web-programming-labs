@@ -23,6 +23,16 @@
             padding:15px;
             text-align: center;
         }
+        .color {
+            border: rgb(3, 95, 29) 2px solid;
+            border-radius: 10px;
+            width: 400px;
+            margin:30px auto;
+            padding:15px;
+            text-align: center;
+            background-color: green;
+            color:black;
+        }
         .guad {
             width: 150px;
             height: 150px;
@@ -64,24 +74,64 @@
                 document.getElementById("number").innerHTML = number;
                 document.getElementById("try-count").innerHTML = count;
             }
+        }
             function again(params) {
-            count = 0;
-            number = Math.floor( Math.random() * 100 ) + 1;
-            let screens = document.getElementsByClassName("game");
-            screens[2].style.display = "none";
-            screens[1].style.display = "block";
+                count = 0;
+                number = Math.floor( Math.random() * 100 ) + 1;
+                let screens = document.getElementsByClassName("game");
+                screens[2].style.display = "none";
+                screens[1].style.display = "block";
+                remove ('result');
             }
             function showRules() {
-            let divrules = document.getElementsByClassName('rules');
-            divrules[0].style.display='none';
-            divrules[1].style.display='block';
+                let divrules = document.getElementsByClassName('rules');
+                divrules[0].style.display='none';
+                divrules[1].style.display='block';
             }
             function closeRules() {
-            divrules = document.getElementsByClassName('rules');
-            divrules[1].style.display='none';
-            divrules[0].style.display='block';
+                divrules = document.getElementsByClassName('rules');
+                divrules[1].style.display='none';
+                divrules[0].style.display='block';
             }
-        }
+            function changeColor(div) {
+                if(div.style.backgroundColor =='green') {
+                    div.style.backgroundColor ='red';
+                    div.style.color ='white';
+                    document.getElementById('color-name').innerHTML='красный';
+                }
+                else if(div.style.backgroundColor =='red'){
+                    div.style.backgroundColor ='black';
+                    div.style.color ='white';
+                    document.getElementById('color-name').innerHTML='черный';
+                }
+                else if(div.style.backgroundColor =='black'){
+                    div.style.backgroundColor ='yellow';
+                    div.style.color ='black';
+                    document.getElementById('color-name').innerHTML='желтый';
+                }
+                else if(div.style.backgroundColor =='yellow'){
+                    div.style.backgroundColor ='violet';
+                    div.style.color ='white';
+                    document.getElementById('color-name').innerHTML='фиолетовый';
+                }
+                else {
+                    div.style.backgroundColor ='green';
+                    div.style.color ='black';
+                    document.getElementById('color-name').innerHTML='зеленый';
+                }
+            }
+        let positionLeft = true;
+        function right() {
+            let position = document.getElementById('block');
+            if (positionLeft == true) {
+                position.style.transform = 'translateX(1000px) rotate(0)';
+                positionLeft = false;
+                }
+            else {
+                position.style.transform = 'translateX(0px) rotate(4turn)';
+                positionLeft = true;
+                }
+            }
     </script>
 </head>
 <body>
@@ -129,6 +179,10 @@
                 <li>Проверить себя</li>
                 <li>Попробовать еще раз</li>
             </ol>
+        </div>
+        <div class="color" ondblclick="changeColor(this)">
+            Цвет: <span id="color-name"> зеленый</span><br>
+            Сделайте двойной щелчок,чтобы сменить.
         </div>    
     </main>
 

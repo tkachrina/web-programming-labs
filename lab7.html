@@ -34,6 +34,15 @@
             document.getElementById('detail').innerHTML = 'среднее значение:' + average;
    
     }
+    function addTransparentBlocks() {
+        let transparent1 = document.getElementById ("transparent-blocks");
+        for (let i = 0; i < 10; i++) {
+            let transparent = document.createElement ('div');
+            transparent. style.opacity = i/10;
+            transparent.innerHTML="Блок №" + (i + 1) + ': opacity ';
+            transparent1.appendChild(transparent);
+        }
+    }
 </script>
 </head>
 <body>
@@ -47,6 +56,11 @@
         <button onclick="showExchange()">Курс доллара</button>
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
+
+        <button onclick="addTransparentBlocks()" >Создавать полупрозрачные блоки</button>
+        <div id="transparent-blocks"></div>
+
+
     </main>
     <footer>
         &copy; Ткаченко Екатерина, ФБИ-13, 2 курс, 2023

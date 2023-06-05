@@ -5,13 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ткаченко Екатерина Игоревна. Лабораторная 5</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function showSum(){
+            let a=5154; /*создать переменную*/
+            let b=7891;
+            let result=a+b; /*операция суммирования*/
+            alert('Сумма ' + a + ' и ' + b + 'равна'+result); /*выводим на экран требуемое сообщение*/
+        }
+    </script>
+    <style>
+        .message{
+            cursor: pointer; /*курсор*/
+            display: inline-block;
+            border: 1px solid; /*граница сплошная*/
+            border-color: rgb(241, 40, 208);
+            border-radius: 7px; /*скругление уголков*/
+            padding: 7px; /*внутренние отступы*/
+            width: 250px; /*ширина*/
+            height: 25px; /*высота*/
+            text-align: center;
+            color: rgb(199, 69, 188);
+            background-color:rgba(255, 137, 255, 0.548) ;
+    
+        }
+    </style>
 </head>
 <body>
     <header>
         НГТУ, ФБ, Лабораторная работа 5
     </header>
     <main>
-        
+        <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
+        <div class="message">Узнать,кто автор страницы</div>
     </main>
     <footer>
         &copy; Ткаченко Екатерина, ФБИ-13, 2 курс, 2023

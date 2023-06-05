@@ -13,6 +13,10 @@
             let result=a+b; /*операция суммирования*/
             alert('Сумма ' + a + ' и ' + b + 'равна'+result); /*выводим на экран требуемое сообщение*/
         }
+        function showAuthor(){
+            let author = 'Авторка страницы:\nТкаченко Екатерина Игоревна';
+            alert(author);
+        }
     </script>
     <style>
         .message{
@@ -32,12 +36,12 @@
     </style>
 </head>
 <body>
-    <header>
+    <header onclick="showAuthor()">
         НГТУ, ФБ, Лабораторная работа 5
     </header>
     <main>
         <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать,кто автор страницы</div>
+        <div class="message" onclick="showAuthor()"">Узнать,кто авторка страницы</div>
     </main>
     <footer>
         &copy; Ткаченко Екатерина, ФБИ-13, 2 курс, 2023

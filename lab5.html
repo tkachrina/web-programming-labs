@@ -21,35 +21,55 @@
             alert(author);
         }
         function showDiff(){
-        let inputA=document.getElementById('numberA');
-        let inputB=document.getElementById('numberB');
-        let a= parseInt(inputA.value);
-        let b= parseInt(inputB.value);
-        let result= a-b;
-        alert ('\n Разность' +  a  +' и ' +  b  +' равна' + result);
+            let inputA=document.getElementById('numberA');
+            let inputB=document.getElementById('numberB');
+            let a= parseInt(inputA.value);
+            let b= parseInt(inputB.value);
+            let result= a-b;
+            alert ('\n Разность' +  a  +' и ' +  b  +' равна' + result);
         }
         function showk() {
-        let inputA=document.getElementById('numberA');
-        let inputB=document.getElementById('numberB');
-        let a= parseInt(inputA.value);
-        let b= parseInt(inputB.value);
-        let result= a*b;
-        alert ('\n Произведение' +  a  +' и ' +  b  +' равно' + result);
+            let inputA=document.getElementById('numberA');
+            let inputB=document.getElementById('numberB');
+            let a= parseInt(inputA.value);
+            let b= parseInt(inputB.value);
+            let result= a*b;
+            alert ('\n Произведение' +  a  +' и ' +  b  +' равно' + result);
         }
         function showd(){
-        let inputA=document.getElementById('numberA');
-        let inputB=document.getElementById('numberB');
-        let a= parseInt(inputA.value);
-        let b= parseInt(inputB.value);
-        let result= a/b;
-        alert ('\n Частное' +  a  +' и ' +  b  +' равно' + result);
+            let inputA=document.getElementById('numberA');
+            let inputB=document.getElementById('numberB');
+            let a= parseInt(inputA.value);
+            let b= parseInt(inputB.value);
+            let result= a/b;
+            alert ('\n Частное' +  a  +' и ' +  b  +' равно' + result);
         }
         function changeOutput(buttonNum, backColor, textColor, border ){
-        let output=document.getElementById('output');
-        output.innerHTML='Нажата кнопка' + buttonNum;
-        output.style.backgroundColor=backColor;
-        output.style.color= textColor;
-        output.style.border=border;
+            let output=document.getElementById('output');
+            output.innerHTML='Нажата кнопка' + buttonNum;
+            output.style.backgroundColor=backColor;
+            output.style.color= textColor;
+            output.style.border=border;
+        }
+        function showTotal() {
+            let inputA = document.getElementById('numbA');
+            let inputB = document.getElementById('numbB');
+            let inputC = document.getElementById('numbC');
+            let inputD = document.getElementById('numbD');
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let c = parseInt(inputC.value);
+            let d = parseInt(inputD.value);
+            let result = (a*100 + b*80 + c*150 + d*300);
+            let q = document.getElementById('output2')
+            q.innerHTML =  'Итого: ' + result
+        }
+        function click(visibility) {
+            let q = document.getElementById('q');
+            q.style.visibility = visibility;
+        }
+        function three(something){
+            something.style.opacity=0;
         } 
     </script>
     <style>
@@ -91,6 +111,22 @@
             width: 250px;
             height: 40px;
         }
+        .cicle {
+            width: 50px; 
+            height: 50px; 
+            border: 2px solid;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 50px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #q {
+            background-color: #fd0606;
+        }
     </style>
 </head>
 <body>
@@ -125,6 +161,16 @@
             <input type="button" value="Рассчитать" onclick=showTotal() >
             <div id='output2'> Итого: </div>
         </div>
+        <div class="cicle" onclick="three(this)"> 1 </div>
+        <div class="cicle" style="background-color: #e7460b;" onclick="three(this)"> 2 </div>
+        <div class="cicle" style="background-color: #2315e8;" onclick="three(this)"> 3 </div>
+        <div class="cicle" style="background-color: #fd06f1;" onclick="three(this)"> 4 </div>
+        <div class="cicle" style="background-color: #13da1a;" onclick="three(this)"> 5 </div>
+        <div class="cicle" style="background-color: #ffffff;" onclick="three(this)"> 6 </div>
+        <div class="cicle" style="background-color: #000000;" onclick="three(this)"> 7 </div>
+        <div class="cicle" style="background-color: #fd067d;" onclick="three(this)"> 8 </div>
+        <div class="cicle" style="background-color: #13c1e8;" onclick="three(this)"> 9 </div>
+        <div class="cicle" style="background-color: #dcf219;" onclick="three(this)"> 10 </div>
     </main>
     <footer>
         &copy; Ткаченко Екатерина, ФБИ-13, 2 курс, 2023

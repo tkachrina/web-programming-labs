@@ -43,6 +43,27 @@
             transparent1.appendChild(transparent);
         }
     }
+    function redGreen() {
+            let circle1 = document.getElementById('div2');
+            let user = document.getElementById('user-number');
+            let input = parseInt(user.value);
+            for(let i = input; i>=1; i--) {
+                let shar = document.createElement('div');
+                shar.style.borderRadius = '50%';
+                shar.style.width = '80px';
+                shar.style.height = '80px';
+                shar.style.lineHeight = '70px'
+                shar.style.textIndent = '35px'
+                shar.innerHTML = i;
+            if(i % 2 == 0) {
+                shar.style.backgroundColor = 'red';
+            }
+            else {
+                shar.style.backgroundColor = 'green';
+            }
+            circle1.appendChild(shar);
+            }
+        }
 </script>
 </head>
 <body>
@@ -59,6 +80,10 @@
 
         <button onclick="addTransparentBlocks()" >Создавать полупрозрачные блоки</button>
         <div id="transparent-blocks"></div>
+
+        <button onclick="redGreen()">Красное/Зеленое</button>
+        <input type="number" value="5" placeholder="Введите число кругов" min="1" max="10" id="user-number"> <br><br>
+        <div id="div2"></div>
 
 
     </main>

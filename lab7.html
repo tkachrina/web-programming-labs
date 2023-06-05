@@ -72,6 +72,40 @@
                 table.appendChild(tab);
             }
         }
+        function kursValut() {
+            let kurs = [6.45, 6.44, 6.49, 6.48, 6.47,
+                        6.37, 6.29, 6.30, 6.13,]
+            let data = ["18.05.2023", "19.05.2023", "22.05.2023", "23.05.2023", "24.05.2023",
+                        "25.05.2023", "26.05.2023", "29.05.2023", "30.05.2023",];
+            let dif = ["-", kurs[1]-kurs[0], kurs[2]-kurs[1], kurs[3]-kurs[2], kurs[4]-kurs[3],
+                            kurs[5]-kurs[4], kurs[6]-kurs[5], kurs[7]-kurs[6], kurs[8]-kurs[7],
+                            kurs[9]-kurs[8], ];
+            let table = document.getElementById("tableValut")
+            for(let i = 0; i < kurs.length; i++) {
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td");
+                let td3 = document.createElement("td");
+                td1.innerHTML = kurs[i];
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                td2.innerHTML = data[i];
+                td3.innerHTML = dif[i];
+                table.appendChild(tr);
+            }
+            let sum = 0;
+            let average = document.getElementById("average");
+            let max = document.getElementById("max");
+            let min = document.getElementById("min");
+            for(i = 0; i < kurs.length; i++) {
+                sum = sum + kurs[i];
+            }
+            let sumAll = sum / kurs.length;
+            average.innerHTML = "Среднее значение: " + sumAll;
+            max.innerHTML = "Максимальное значение: " + Math.max.apply(0, kurs);
+            min.innerHTML = "Минимальное значение: " + Math.min.apply(0, kurs);
+        }
 </script>
 </head>
 <body>
@@ -95,6 +129,13 @@
 
         <button onclick="tablekd()">Таблица умножения на 41</button>
         <div id="table"></div>
+
+        <button onclick="kursValut()">Курс Акций "Московский кредитный банк"</button>
+        <table border="1" id="tableValut"></table>
+        <div id="detailValut"></div>
+        <div id="average"></div>
+        <div id="max"></div>
+        <div id="min"></div>
 
 
     </main>

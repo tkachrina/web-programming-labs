@@ -67,10 +67,29 @@
             background-color:rgba(255, 137, 255, 0.548) ;
     
         }
+        .second{
+            width:250px;
+            height: 400px;
+            background-color: rgb(250, 228, 248);
+            border: 2px solid rgb(219, 2, 190);
+            border-radius: 7px;
+            display: inline-block;
+            margin:30px;
+            padding:15px;
+            cursor: pointer;
+            font-weight: bold;
+            color:rgb(250, 13, 230);
+            font-size: 20px;
+        }
         #output {
             border:1px solid;
             width:300px;
             height:40px;
+        }
+        #output2 {
+            border: 1px solid;
+            width: 250px;
+            height: 40px;
         }
     </style>
 </head>
@@ -93,6 +112,19 @@
             <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'white', 'red', 'dashed')">
         </div>
         <div id="output"></div>
+        <div class="second"> 
+            <div style="font-size: 20px; font-weight: 10px; margin: 10px; margin-left: 45px;">Корзина товаров</div>
+            <div>Яблоки(100р/шт):</div>
+            <div><input type="number" value="0" id="numbA"></div>
+            <div>Груши(80р/шт)</div>
+            <div><input type="number" value="0" id="numbB"></div>
+            <div>Апельсины(150р/шт)</div>
+            <div><input type="number" value="0" id="numbC"></div>
+            <div>Дыни(300р/шт)</div>
+            <div><input type="number" value="0" id="numbD"></div>
+            <input type="button" value="Рассчитать" onclick=showTotal() >
+            <div id='output2'> Итого: </div>
+        </div>
     </main>
     <footer>
         &copy; Ткаченко Екатерина, ФБИ-13, 2 курс, 2023

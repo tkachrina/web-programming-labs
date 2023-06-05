@@ -20,6 +20,30 @@
             let author = 'Авторка страницы:\nТкаченко Екатерина Игоревна';
             alert(author);
         }
+        function showDiff(){
+        let inputA=document.getElementById('numberA');
+        let inputB=document.getElementById('numberB');
+        let a= parseInt(inputA.value);
+        let b= parseInt(inputB.value);
+        let result= a-b;
+        alert ('\n Разность' +  a  +' и ' +  b  +' равна' + result);
+        }
+        function showk() {
+        let inputA=document.getElementById('numberA');
+        let inputB=document.getElementById('numberB');
+        let a= parseInt(inputA.value);
+        let b= parseInt(inputB.value);
+        let result= a*b;
+        alert ('\n Произведение' +  a  +' и ' +  b  +' равно' + result);
+        }
+        function showd(){
+        let inputA=document.getElementById('numberA');
+        let inputB=document.getElementById('numberB');
+        let a= parseInt(inputA.value);
+        let b= parseInt(inputB.value);
+        let result= a/b;
+        alert ('\n Частное' +  a  +' и ' +  b  +' равно' + result);
+        }
     </script>
     <style>
         .message{
@@ -47,6 +71,9 @@
         <label>Второе число: <input type="number" value="7891" id="numberB"></label><br>
         <div class="message" onclick="showSum()">Найти сумму чисел</div>
         <div class="message" onclick="showAuthor()"">Узнать,кто авторка страницы</div>
+        <div class="message" onclick="showDiff()"> Найти разность чисел </div>
+        <div class="message" onclick="showk()"> Найти произведение чисел </div>
+        <div class="message" onclick="showd()"> Найти частное чисел </div>
     </main>
     <footer>
         &copy; Ткаченко Екатерина, ФБИ-13, 2 курс, 2023

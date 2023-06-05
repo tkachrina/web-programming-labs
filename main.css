@@ -16,6 +16,9 @@ header:hover {
     font-size: 20pt;
     transition: 600ms 1s
 }
+main{
+  margin: 10px 20px;  
+}
 footer{
     background: linear-gradient(to right,hotpink, rgb(236, 136, 153),rgb(255, 174, 188),rgb(253, 211, 232)) ;
     color: rebeccapurple;

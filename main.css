@@ -6,14 +6,14 @@ body{
 }
 
 header{
-    background-color: hotpink;
+    background: linear-gradient(to right, hotpink, rgb(236, 136, 153),rgb(255, 174, 188),rgb(253, 211, 232)) ;
     color: rebeccapurple;
     padding: 10px;
     font-size: 16pt
 }
 
 footer{
-    background-color: hotpink;
+    background: linear-gradient(to right, hotpink, rgb(236, 136, 153),rgb(255, 174, 188),rgb(253, 211, 232)) ;
     color: rebeccapurple;
     padding: 10px;
     font-size: 16pt;

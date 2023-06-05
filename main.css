@@ -11,15 +11,23 @@ header{
     padding: 10px;
     font-size: 16pt
 }
-
+header:hover {
+    color: rgb(251, 255, 0);
+    font-size: 20pt;
+    transition: 600ms 1s
+}
 footer{
-    background: linear-gradient(to right, hotpink, rgb(236, 136, 153),rgb(255, 174, 188),rgb(253, 211, 232)) ;
+    background: linear-gradient(to right,hotpink, rgb(236, 136, 153),rgb(255, 174, 188),rgb(253, 211, 232)) ;
     color: rebeccapurple;
     padding: 10px;
     font-size: 16pt;
     text-align: center
 }
-
+footer:hover {
+    color: rgb(251, 255, 0);
+    font-size: 20pt;
+    transition: 600ms 1s
+}
 a{
     text-decoration:none;
     color: chartreuse;

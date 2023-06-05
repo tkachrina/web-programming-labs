@@ -45,6 +45,21 @@
             line-height: 130px;
             text-align: center;
         }
+        #block2 {
+            border: 3px gray solid;
+            width: 100px;
+            height: 71px;
+            color: white;
+            text-align: center;
+            margin: 35px;
+            padding: 8px;
+            background-color: rgb(67, 123, 236);
+            padding-bottom: 0px;
+            transition: 1s;
+        }
+        #block2:hover {
+            cursor: pointer;
+        }
 
     </style>
     <script>
@@ -131,7 +146,51 @@
                 position.style.transform = 'translateX(0px) rotate(4turn)';
                 positionLeft = true;
                 }
+        }
+            let widthbig = 100
+        function big() {
+            let block2 = document.getElementById('block2');
+            let sizeWidth = parseInt(block2.style.width);
+        if (sizeWidth < 1000) {
+            sizeWidth += 50;
             }
+        else {
+            sizeWidth = 100;
+            }
+        block2.style.width = sizeWidth + 'px';
+        }
+        function filter() {
+            let color = document.getElementById('wear-color').value
+            let type = document.getElementById('wear-type').value
+            let wear = document.getElementById('wear')
+            if(color =='Красный' && type == 'Футболка') {
+                wear.src = 'red-f.jpg'
+            }
+            if(color =='Красный' && type == 'Майка') {
+                wear.src = 'red-m.jpg'
+            }
+            if(color =='Красный' && type == 'Поло') {
+                wear.src = 'red-p.jpg'
+            }
+            if(color =='Белый' && type == 'Футболка') {
+                wear.src = 'white-f.jpg'
+            }
+            if(color =='Белый' && type == 'Майка') {
+                wear.src = 'white-m.jpg'
+            }
+            if(color =='Белый' && type == 'Поло') {
+                wear.src = 'white-p.jpg'
+            }
+            if(color =='Чёрный' && type == 'Футболка') {
+                wear.src = 'black-f.jpg'
+            }
+            if(color =='Чёрный' && type == 'Майка') {
+                wear.src = 'black-m.jpg'
+            }
+            if(color =='Чёрный' && type == 'Поло') {
+                wear.src = 'black-p.jpg'
+            } 
+        }
 
     </script>
 </head>
@@ -184,7 +243,25 @@
         <div class="color" ondblclick="changeColor(this)">
             Цвет: <span id="color-name"> зеленый</span><br>
             Сделайте двойной щелчок,чтобы сменить.
-        </div>    
+        </div>
+        <div class="guad" id="block" ondblclick="right()"> Щелкни меня </div>
+        <div id="block2" onclick="big()"> нажми, чтобы я стал шире</div>  
+        <div>
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Чёрный</option>
+            </select><br>
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+            <button onclick="filter()">ОК</button><br>
+            <img id="wear" height="500" width="500">
+        </div>  
     </main>
 
     <footer>

@@ -36,4 +36,13 @@ function showDaysCount() {
     let inputDate = document.querySelector('input[type=date]');
     let birthday = new Date(inputDate.value);
     let daysCount = (today - birthday)/1000/60/60/24;
+    daysCount = Math.floor (daysCount);
+    document.getElementById('dt').innerHTML = 'количество дней с даты рождения:' + daysCount;
 }
+
+function showTime() {
+    let today = new Date();
+    let currentTime = today.toLocaleTimeString('ru-RU');
+    document.getElementById('time').innerHTML = currentTime;
+}
+setInterval(showTime,1000);

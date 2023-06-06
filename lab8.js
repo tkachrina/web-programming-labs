@@ -30,3 +30,10 @@ function showDate()   {
     let todayyyyyyy = new Date();
     outtttttt.innerHTML = "Дата и время для Франции:  " + todayyyyyyy.toLocaleString('fr');
 }
+
+function showDaysCount() {
+    let today = new Date();
+    let inputDate = document.querySelector('input[type=date]');
+    let birthday = new Date(inputDate.value);
+    let daysCount = (today - birthday)/1000/60/60/24;
+}
